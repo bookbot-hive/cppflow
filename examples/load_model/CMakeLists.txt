@@ -5,7 +5,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-omit-frame-pointer -fsanitize=addre
 set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} -lasan")
 
 add_executable(load_model main.cpp)
-target_link_libraries(load_model cppflow)
+target_link_libraries(load_model tensorflow)
 target_compile_definitions(load_model PUBLIC
   MODEL_PATH="${CMAKE_CURRENT_SOURCE_DIR}/model"
 )

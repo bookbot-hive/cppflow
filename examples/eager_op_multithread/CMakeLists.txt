@@ -7,4 +7,4 @@ find_package(Threads REQUIRED)
 #set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} -fno-omit-frame-pointer -fsanitize=thread")
 
 add_executable(eager_op_multithread main.cpp)
-target_link_libraries(eager_op_multithread Threads::Threads cppflow)
+target_link_libraries(eager_op_multithread Threads::Threads tensorflow)
